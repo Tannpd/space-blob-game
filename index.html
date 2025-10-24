@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Blob Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <div class="score-board">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="lives">Lives: <span id="lives">3</span></div>
+                <div class="level">Level: <span id="level">1</span></div>
+            </div>
+            <button id="startBtn" class="btn">Start Game</button>
+            <button id="pauseBtn" class="btn" style="display: none;">Pause</button>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>🎮 Use <strong>Arrow Keys</strong> or <strong>A/D</strong> to move left and right</p>
+            <p>🌟 Collect stars (+10 points)</p>
+            <p>🪐 Collect planets (+25 points)</p>
+            <p>🛸 Collect UFOs (+50 points - Rare!)</p>
+            <p>☄️ Avoid meteors or lose a life!</p>
+            <p>🎯 Reach higher scores to level up!</p>
+        </div>
+        
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>Level Reached: <span id="finalLevel">1</span></p>
+            <button id="restartBtn" class="btn">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
+
